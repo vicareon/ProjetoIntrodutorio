@@ -10,7 +10,14 @@ public class Card implements Comparable<Card>{
     private Date dataTermino;
 
     public Card(){
+    }
 
+    public Card(String nome, String descricao, String categoria, String status, int prioridade) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.categoria = categoria;
+        this.status = status;
+        this.prioridade = prioridade;
     }
 
     public String getNome() {

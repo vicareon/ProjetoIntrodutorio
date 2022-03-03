@@ -24,16 +24,26 @@ public class Main {
 
         switch (escolhaMenu){
             case 1:
-                Card card = new Card();
-                cadastroCard(card, leitura);
-                listaDeCards.add(card);
-                rebalanceamento(listaDeCards);
-                System.out.println("Card adicionado com sucesso!");
+                System.out.println("Digite o número de cards que deseja adicionar: ");
+                int numeroAddCards = Integer.parseInt(leitura.readLine());
+                for(int i = 0; i <= numeroAddCards; i++){
+                    Card card = new Card();
+                    cadastroCard(card, leitura);
+                    listaDeCards.add(card);
+                    rebalanceamento(listaDeCards);
+                    System.out.println("Card adicionado com sucesso!");
+                }
+
             case 2:
                 mostrarCards(listaDeCards);
+                break;
 
             case 3:
                 removerCard(listaDeCards, leitura);
+                break;
+
+            default:
+                throw new IllegalStateException("Valor inválido: " + escolhaMenu);
         }
     }
 
@@ -46,7 +56,13 @@ public class Main {
         System.out.print("Digite a categoria: ");
         card.setCategoria(leitura.readLine());
         System.out.print("Digite a prioridade ( 1 a 5 ): ");
-        card.setPrioridade(Integer.parseInt(leitura.readLine()));
+        int numeroValidaPrioridade = Integer.parseInt(leitura.readLine());
+        if(numeroValidaPrioridade >= 1 || numeroValidaPrioridade <= 5){
+            card.setPrioridade(numeroValidaPrioridade);
+        }
+        else{
+            throw new IOException("Número de prioridade inválido!");
+        }
         System.out.print("Digite a data de término: ");
         String inputData = leitura.readLine();
         Date dataTermino = new SimpleDateFormat("dd/MM/yyyy").parse(inputData);
