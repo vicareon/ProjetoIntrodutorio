@@ -27,6 +27,7 @@ public class TesteCadastroCard {
         cardTeste.setPrioridade(5);
         cardTeste.setStatus("Status Teste");
 
+        //para criar uma data em formato legível para mostrar no card
         String pattern = "yyyy-MM-dd";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
         Date dataTermino = simpleDateFormat.parse("2022-06-30");

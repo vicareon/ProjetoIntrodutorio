@@ -10,6 +10,8 @@ import java.util.Collections;
 import java.util.Date;
 
 public class Main {
+    //@veronica scislewski
+
     public static void main(String[] args) throws IOException, ParseException {
         ArrayList<Card> listaDeCards = new ArrayList<Card>();
         BufferedReader leitura = new BufferedReader(new InputStreamReader(System.in));
