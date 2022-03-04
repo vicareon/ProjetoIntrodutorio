@@ -20,8 +20,11 @@ public class TesteMostrarCards {
         listaDeCards.add(cardTeste2);
         listaDeCards.add(cardTeste3);
 
+        //rebalanceamento de cards de acordo com a prioridade
         Collections.sort(listaDeCards);
 
+        //then
+        //imprime a array lista de cards
         for(Object c : listaDeCards){
             System.out.println(c.toString());
         }

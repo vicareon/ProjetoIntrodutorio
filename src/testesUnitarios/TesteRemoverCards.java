@@ -24,8 +24,10 @@ public class TesteRemoverCards {
         int tamanhoEsperado = 2;
         int tamanhoAtual = listaDeCards.size();
 
+        //comparação se o tamanho esperado de cards é o mesmo do atual
         boolean resultado = (tamanhoAtual == tamanhoEsperado);
 
+        //then
         System.out.println(resultado);
     }
 }
