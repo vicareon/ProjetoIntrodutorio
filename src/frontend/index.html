@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<!-- Cabeçalho -->
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicação TO-DO List da ZG</title>
+    <meta name="Descrição" content="Projeto introdutório da trilha de Javascript da Acelera ZG.">
+    <meta name="Autora" content="Veronica Scislewski">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/f040b0ae9e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Página principal -->
+        <div class="caixa">
+            <h1>to-do list.</h1>
+            <p>Chega de preguiça.</p>
+            <p>Faça logo o que você tem que fazer.</p>
+            <button id="botaoCriar">Criar</button>
+
+            <!-- Janela modal com Cadastro de Card -->
+            <div class="modal-container" id="modal_container_cadastro">
+                <div class="modal">
+                    <h1>cadastro de card.</h1>
+                    <!-- Formulário -->
+                    <form>
+                        <label>
+                            <input type="text" id="nome" placeholder="Nome">
+                        </label>
+                        <label>
+                            <input type="text" id="categoria" placeholder="Categoria">
+                        </label>
+                        <label for="status"></label><select id="status" name="status">
+                            <option value="status">Status</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <label for="prioridade"></label><select id="prioridade" name="prioridade">
+                            <option value="prioridade">Prioridade</option>
+                            <option value="aFazer">A fazer</option>
+                            <option value="emProgresso">Em progresso</option>
+                            <option value="feito">Feito</option>
+                        </select>
+                        <button id="botaoFecharJanelaModal">Fechar</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Lista de cards com botões de atualizar e excluir -->
+            <ol style="list-style-type:none;">
+                <li>Card 1<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+                <li>Card 2<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+                <li>Card 3<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+            </ol>
+
+        </div>
+    </div>
+</body>
+
+<script src="./app.js" defer></script>
+
+</html>
