@@ -12,54 +12,47 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Página principal -->
-        <div class="caixa">
-            <h1>to-do list.</h1>
-            <p>Chega de preguiça.</p>
-            <p>Faça logo o que você tem que fazer.</p>
-            <button id="botaoCriar">Criar</button>
+<div class="container">
+    <!-- Página principal -->
+    <div class="caixa">
+        <h1>to-do list.</h1>
+        <p>Chega de preguiça.</p>
+        <p>Faça logo o que você tem que fazer.</p>
+        <button id="botaoCriar">Criar</button>
 
-            <!-- Janela modal com Cadastro de Card -->
-            <div class="modal-container" id="modal_container_cadastro">
-                <div class="modal">
-                    <h1>cadastro de card.</h1>
-                    <!-- Formulário -->
-                    <form>
-                        <label>
-                            <input type="text" id="nome" placeholder="Nome">
-                        </label>
-                        <label>
-                            <input type="text" id="categoria" placeholder="Categoria">
-                        </label>
-                        <label for="status"></label><select id="status" name="status">
-                            <option value="status">Status</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        <label for="prioridade"></label><select id="prioridade" name="prioridade">
-                            <option value="prioridade">Prioridade</option>
-                            <option value="aFazer">A fazer</option>
-                            <option value="emProgresso">Em progresso</option>
-                            <option value="feito">Feito</option>
-                        </select>
-                        <button id="botaoFecharJanelaModal">Fechar</button>
-                    </form>
-                </div>
+        <!-- Janela modal com Cadastro de Card -->
+        <div class="modal-container" id="modal_container_cadastro">
+            <div class="modal">
+                <h1>cadastro de card.</h1>
+                <!-- Formulário de Cadastro de Card -->
+                <form id="formularioCadastro">
+                    <label for="nomeCard"></label><input type="text" name="nomeCard" id="nomeCard" placeholder="Nome">
+                    <label for="descricaoCard"></label><input type="text" name="descricaoCard" id="descricaoCard" placeholder="Descrição">
+                    <label for="categoriaCard"></label><input type="text" name="categoriaCard" id="categoriaCard" placeholder="Categoria">
+                    <label for="prioridade"></label><input type="text" name="prioridade" id="prioridade" placeholder="Prioridade (1 a 5)">
+                    <label for="status"></label><select id="status" name="status">
+                    <option value="status">Status</option>
+                    <option value="aFazer">A fazer</option>
+                    <option value="emProgresso">Em progresso</option>
+                    <option value="feito">Feito</option>
+                </select>
+                    <!-- data de termino -->
+                    <label for="dataTermino"></label>
+                    <input type="date" id="dataTermino" min='2022-03-25' name="dataTermino" value="yyyy-MM-dd" placeholder="Data de término">
+                </form>
+                <button id="botaoFecharJanelaModal">Salvar & Fechar</button>
             </div>
-
-            <!-- Lista de cards com botões de atualizar e excluir -->
-            <ol style="list-style-type:none;">
-                <li>Card 1<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
-                <li>Card 2<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
-                <li>Card 3<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
-            </ol>
-
         </div>
+
+        <!-- Lista de cards com botões de atualizar e excluir -->
+        <ol style="list-style-type:none;">
+            <li>Card 1<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+            <li>Card 2<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+            <li>Card 3<i class="fa-solid fa-pen"></i><i class="fa-solid fa-trash"></i></li>
+        </ol>
+
     </div>
+</div>
 </body>
 
 <script src="./app.js" defer></script>
